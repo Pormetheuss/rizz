@@ -1,7 +1,9 @@
 let slider = document.getElementById("slider");
 let selector = document.getElementById("selector")
 let SelectValue = document.getElementById("SelectValue");
-let play = document.getElementById("play");
+let text = document.querySelector(".text");
+let audio = new Audio("beep-07a.mp3");
+let max = new Audio("Sound.m4a");
 
 
 SelectValue.innerHTML = slider.value;
@@ -13,13 +15,6 @@ slider.oninput = function(){
 
 
 slider.addEventListener("input", function(){
-  if(!audio){
-  let audio = new Audio("beep-07a.mp3");
-  }
-  if(!max){
-  let max = new Audio("Sound.m4a");
-  max.playbackRate = 1.5;
-  }
     if (parseInt(slider.value) > 0) {
         audio.loop = true;
         audio.playbackRate = parseInt(slider.value)/10;
