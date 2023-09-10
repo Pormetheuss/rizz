@@ -12,7 +12,7 @@ slider.oninput = function () {
   selector.style.left = this.value + "%";
 };
 
-slider.addEventListener("input", function () {
+slider.addEventListener("change", function () {
   if (parseInt(slider.value) > 0) {
     audio.loop = true;
     audio.playbackRate = parseInt(slider.value) / 10;
