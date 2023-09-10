@@ -14,8 +14,12 @@ slider.oninput = function(){
 
 
 slider.addEventListener("input", function(){
+  if(!audio){
   let audio = new Audio("beep-07a.mp3");
+  }
+  if(!max){
   let max = new Audio("Sound.m4a");
+  }
     if (parseInt(slider.value) > 0) {
         audio.loop = true;
         audio.playbackRate = parseInt(slider.value)/10;
