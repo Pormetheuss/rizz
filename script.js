@@ -3,7 +3,6 @@ let selector = document.getElementById("selector")
 let SelectValue = document.getElementById("SelectValue");
 let play = document.getElementById("play");
 
-max.playbackRate = 1.5;
 
 SelectValue.innerHTML = slider.value;
 
@@ -19,6 +18,7 @@ slider.addEventListener("input", function(){
   }
   if(!max){
   let max = new Audio("Sound.m4a");
+  max.playbackRate = 1.5;
   }
     if (parseInt(slider.value) > 0) {
         audio.loop = true;
